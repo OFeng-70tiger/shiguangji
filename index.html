@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="MLv2SJ6BCSEnJyvp59cMUD">
+<head data-page-node-id="23PPJBCymG5ljC7Ny2tOoC">
+<meta charset="UTF-8" data-page-node-id="WPLw0lT0aJRoHbJ4X9GQMH">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="M6zJQrbleJqKzHyC5RybT8">
+<title>《吴地时光机》2026秋季班 · 课程交互目录</title>
+<style>
+:root{
+  --paper:#f6f0e2;--paper2:#efe6d2;--ink:#2f231a;--soft:#6d5c49;
+  --red:#9b2226;--red2:#7c1a1e;--gold:#b8923e;--line:#d8cbae;
+  --out:#b3542e;/* 户外橙色 */
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.8}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 90px}
+button{font-family:inherit;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding:52px 16px 8px}
+.hero .seal{display:inline-block;border:2px solid var(--red);color:var(--red);
+  font-size:.9rem;letter-spacing:.4em;padding:3px 14px 3px 20px;margin-bottom:18px;border-radius:4px}
+.hero h1{font-size:clamp(2rem,6vw,3rem);letter-spacing:.1em;line-height:1.35}
+.hero h1 b{color:var(--red);font-weight:700}
+.hero .sub{margin-top:10px;color:var(--soft);letter-spacing:.35em;font-size:.95rem}
+.hero .flow{color:var(--gold);font-size:1.02rem;margin-top:14px;letter-spacing:.1em}
+.hero .flow i{font-style:normal;color:var(--red)}
+
+/* 速览卡 */
+.facts{margin:34px auto 6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fact{background:#fffdf6;border:1px solid var(--line);border-left:4px solid var(--gold);
+  border-radius:10px;padding:12px 16px}
+.fact .k{font-size:.78rem;color:var(--soft);letter-spacing:.15em;margin-bottom:2px}
+.fact .v{font-size:.98rem;font-weight:700;letter-spacing:.03em}
+.fact .v small{font-weight:400;color:var(--soft);font-size:.85rem}
+
+/* 目录条 */
+nav.mu{position:sticky;top:10px;z-index:40;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;
+  background:rgba(246,240,226,.94);backdrop-filter:blur(6px);border:1px solid var(--line);
+  border-radius:999px;padding:7px 14px;margin:28px auto 10px;box-shadow:0 2px 8px rgba(120,95,50,.08)}
+nav.mu button{border:none;background:none;color:var(--soft);font-size:.86rem;padding:3px 12px;border-radius:999px;letter-spacing:.08em}
+nav.mu button:hover{color:var(--red)}
+
+/* 章节 */
+section{margin-top:44px;scroll-margin-top:80px}
+.sec-h{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:18px}
+.sec-h .no{color:var(--red);font-size:1.45rem;font-weight:700;letter-spacing:.1em}
+.sec-h h2{font-size:1.45rem;letter-spacing:.12em}
+.sec-h .en{margin-left:auto;font-size:.72rem;color:var(--soft);letter-spacing:.2em}
+.lead{color:var(--soft);font-size:.96rem;margin-bottom:14px}
+
+/* 亮点 */
+.hls{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.hl{background:#fffdf6;border:1px solid var(--line);border-radius:12px;padding:14px 16px;position:relative}
+.hl .tag{position:absolute;top:-11px;left:14px;background:var(--red);color:#fff;
+  font-size:.74rem;letter-spacing:.2em;padding:1px 12px;border-radius:999px}
+.hl h4{margin-top:6px;font-size:1.05rem;letter-spacing:.06em;color:var(--red2)}
+.hl p{font-size:.92rem;color:var(--ink);margin-top:6px}
+.hl.gold .tag{background:var(--gold)}
+
+/* 课表 */
+.filters{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);background:#fffdf6;border-radius:999px;padding:4px 16px;
+  font-size:.86rem;color:var(--soft);letter-spacing:.05em}
+.filters button.on{background:var(--red);border-color:var(--red);color:#fff6e8}
+.unit{margin-bottom:18px}
+.unit-h{display:flex;align-items:center;gap:10px;margin:4px 0 8px}
+.unit-h .dot{width:10px;height:10px;border-radius:50%;flex:none}
+.unit-h h3{font-size:1.08rem;letter-spacing:.1em}
+.unit-h .cnt{margin-left:auto;font-size:.78rem;color:var(--soft)}
+.rows{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fffdf6}
+.lesson{display:flex;align-items:center;gap:12px;padding:9px 14px;border-bottom:1px dashed var(--line)}
+.lesson:last-child{border-bottom:none}
+.lesson .idx{flex:none;width:30px;height:30px;border-radius:50%;background:var(--paper2);
+  color:var(--soft);display:flex;align-items:center;justify-content:center;font-size:.82rem}
+.lesson .t{flex:1;font-size:.96rem;letter-spacing:.02em}
+.lesson .tag{flex:none;font-size:.72rem;padding:1px 10px;border-radius:4px;letter-spacing:.06em}
+.lesson.in .tag{background:var(--paper2);color:var(--soft);border:1px solid var(--line)}
+.lesson.out{background:#fdf3ea}
+.lesson.out .tag{background:var(--out);color:#fff}
+.lesson.out .idx{background:var(--out);color:#fff}
+.legend{font-size:.8rem;color:var(--soft);margin-top:8px;display:flex;gap:16px;align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.legend .li-out i{background:var(--out)}
+.legend .li-in i{background:var(--paper2);border:1px solid var(--line)}
+
+/* 户外一览 */
+.outs{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.outc{background:#fffdf6;border:1px solid var(--line);border-top:3px solid var(--out);border-radius:12px;padding:13px 16px}
+.outc .where{display:flex;align-items:center;gap:8px}
+.outc .n{background:var(--out);color:#fff;font-size:.72rem;border-radius:5px;padding:0 7px;flex:none;letter-spacing:.1em}
+.outc h4{font-size:1.04rem;color:var(--red2)}
+.outc p{font-size:.9rem;color:var(--ink);margin-top:6px}
+.outc .cam{display:inline-block;margin-top:8px;background:var(--paper2);border:1px solid var(--line);
+  border-radius:999px;padding:2px 12px;font-size:.78rem;color:var(--red2);letter-spacing:.03em}
+
+/* 人群 */
+.auds{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.aud{background:#fffdf6;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:.95rem}
+.closer{text-align:center;margin-top:44px;padding:26px 18px;background:var(--paper2);
+  border:1px solid var(--line);border-radius:14px;color:var(--red2);letter-spacing:.1em}
+.closer .big{font-size:1.15rem;font-weight:700}
+.closer .sm{color:var(--soft);font-size:.9rem;margin-top:6px;letter-spacing:.2em}
+footer{margin-top:34px;text-align:center;color:var(--soft);font-size:.78rem;letter-spacing:.1em}
+@media(max-width:560px){nav.mu{border-radius:16px}.sec-h .en{display:none}}
+</style>
+</head>
+<body data-page-node-id="ZXP8MOzFMtpPVCSQGUzIVf">
+<div class="wrap" data-page-node-id="9ZWJKUd2w7TFMTKmbslm7P">
+
+<header class="hero" data-page-node-id="npTGSkE9mIdAM8XcKJ33AW">
+  <span class="seal" data-page-node-id="fKPHoK4UU6V8FHNo6hg31r">姑苏文史课堂 · 2026 秋季</span>
+  <h1 data-page-node-id="HYPBVeYX9Rb9mMbxOFIRYx">《吴地时光机》<br data-page-node-id="Eo9yqK1FoKZbCAwLMKJbdo">苏州趣味文史课程</h1>
+  <p class="sub" data-page-node-id="hMDtxn9AgdhWb1qzdGo9ti">秋 季 班 · 课 程 介 绍</p>
+  <p class="flow" data-page-node-id="e86jfiavQSRRBmX3jpV8Tn">城与河 <i data-page-node-id="sH2CyndIT5Z0yhLU4L2nX0">→</i> 学与脉 <i data-page-node-id="BHMAdvvCZpEhS5zXoQIfII">→</i> 商与街 <i data-page-node-id="qyV4rID4eHVwAdvgiCICAk">→</i> 古今苏州</p>
+</header>
+
+<div class="facts" data-page-node-id="ttm5kiBQiKO6fsmA20Mk2U">
+  <div class="fact" data-page-node-id="MAUIpu4hIz6qHNxIAkGT60"><div class="k" data-page-node-id="w30v4OzQTexJCoePF9vxsi">招生对象</div><div class="v" data-page-node-id="fjwj1Z5ApqmAmVEcWokkwx">苏州退休老年人<small data-page-node-id="UaGLOohMestzHhxzpqyKkc">（面向社会）</small></div></div>
+  <div class="fact" data-page-node-id="x2OuS9boKwBOciqcj9XpSH"><div class="k" data-page-node-id="hMdKmPT0FEgpmnztBo71pz">课程次数</div><div class="v" data-page-node-id="f9729SYXqrg9q1iISUFTXa">15 次课<small data-page-node-id="GTdLBCl8zRYryloExnVytz">· 室内10 + 户外5 · 每次90分钟</small></div></div>
+  <div class="fact" data-page-node-id="0RGPMhVKGIcgCviPGe39zy"><div class="k" data-page-node-id="7olEEvGIFEFlkx7J0oHEQY">上课形式</div><div class="v" data-page-node-id="EuLXyAp7M3DSFbzGIWQxyB">室内专题讲座<small data-page-node-id="BfOJY9tVHqxzlrHoEwVzdD">＋ 户外实地走读</small></div></div>
+</div>
+<div class="fact" style="margin-top:12px" data-page-node-id="pbwCCDbDCghHJEUYjHwCES"><div class="k" data-page-node-id="PQMN1qzeq6MiT2IdWdw112">户外五站</div><div class="v" data-page-node-id="b51VYYrxjKs9Wv6GixFm1H">北寺塔 · 苏州文庙 · 苏州大学 · 阊门 · 山塘街</div></div>
+
+<nav class="mu" data-page-node-id="465PibQUthJWAO1ZrluWaG">
+  <button onclick="go('s-intro')" data-page-node-id="8HxgHzJdDLKIFLX0sHFz1C">课程简介</button><button onclick="go('s-hl')" data-page-node-id="QfGKsuwrFlZ2TNHxp4TsrE">五大亮点</button>
+  <button onclick="go('s-sche')" data-page-node-id="hkx9QPJBVK8Z6PKzoBLaRV">15课目录</button><button onclick="go('s-out')" data-page-node-id="v9kz83uPDUEMVRbfFCuphP">户外一览</button>
+  <button onclick="go('s-aud')" data-page-node-id="hQ3IQVxfYn42eHpmX8c7PK">适合人群</button>
+</nav>
+
+<section id="s-intro" data-page-node-id="agkeXFkPgPH6JxSC3FRPcD">
+  <div class="sec-h" data-page-node-id="A0ngP0P3kbRIVegSXoBC2R"><span class="no" data-page-node-id="PmSP09Af4xTBNTl5u8VEzq">壹</span><h2 data-page-node-id="L0CfOS7jqJT7JOYifm9PIm">课程简介</h2><span class="en" data-page-node-id="5b0knxUEuzH0zJ3BceyKb7">INTRO</span></div>
+  <p class="lead" data-page-node-id="xad9ImFu5r53RgDyN7cvQ8">《吴地时光机》是一门专为苏州老年朋友打造的苏州本地趣味文史课程。课程以苏州 2500 年城市发展为线索，从春秋伍子胥筑城到明清繁华，从城门城墙到宝塔书院，从水陆街巷到古今对话，带领学员走进苏州的历史现场，在真实的空间中感受文化脉络。</p>
+  <p class="lead" data-page-node-id="DbQnLERmnaGBJblTFTpJ8t">课程采用「室内专题讲座 + 户外实地走读」相结合的教学模式：室内课铺垫历史背景和文化脉络，户外课走进<b style="color:var(--red2)" data-page-node-id="Br5MOzijMMcc8LYdzC2R3v">北寺塔、文庙、苏大、阊门、山塘街</b>五大历史现场，每堂户外课还安排<b style="color:var(--red2)" data-page-node-id="jqrWb6marTC5xGsAMoERnT">手机摄影实战</b>环节，让学员既学知识又学拍照，边走边学、边看边拍。</p>
+</section>
+
+<section id="s-hl" data-page-node-id="XNbPh9NfkzHPgEPgdgXHFQ">
+  <div class="sec-h" data-page-node-id="mtmPWFMrvzl1ou6DiGoLdz"><span class="no" data-page-node-id="0CeH4gp6RN0XthFwBmqkIO">贰</span><h2 data-page-node-id="3A38yXE8a9tXaBcIqEKpor">五大课程亮点</h2><span class="en" data-page-node-id="24haBxUBjWDNJvHzJW8DxL">HIGHLIGHTS</span></div>
+  <div class="hls" data-page-node-id="yPxDF3SYhFjPWYZcPF7wIr">
+    <div class="hl" data-page-node-id="J5MSkDpPt2AHNVGj1yw9QS"><span class="tag" data-page-node-id="y1SjXlgB99CmfgrH2IGgfp">壹</span><h4 data-page-node-id="ysBMhA25I7gf9YJag3worz">十堂室内＋五堂现场 · 走读结合</h4><p data-page-node-id="b3hBncxV8zvYwcJKKjVSDQ">不是坐在教室里听书，而是走到历史现场去感受。室内课打底、户外课验证，知识和体验互相印证，记得住、用得上。</p></div>
+    <div class="hl gold" data-page-node-id="ezraNtEAe8b7EkKZiBDCyq"><span class="tag" data-page-node-id="rBTwPSBD95LTvLC43DXKMo">贰</span><h4 data-page-node-id="swyA3qBzvOppDG9rHK7lk7">带着古画地图去现场 · 古今对照</h4><p data-page-node-id="AdMvGn1oaG5OJD9UqE4VYb">《平江图》《姑苏繁华图》等珍贵古地图、古画卷带到现场，对着画面找地标，看看几百年前的苏州和今天有什么不一样，像在玩一场「城市考古」。</p></div>
+    <div class="hl" data-page-node-id="EBWCAzZf9x2bhkAzRqjqi3"><span class="tag" data-page-node-id="vjf1Hbnml9eRC1auDmda9s">叁</span><h4 data-page-node-id="PhRkxOInl0q4i9NtBfHOOi">每堂户外课 · 手机摄影实战</h4><p data-page-node-id="dlGzWIYzdaJyuRrAI76DrX">不只是走马观花，每次户外都有明确的摄影主题和拍摄技巧：红墙金叶、宝塔构图、延时车流、桥洞倒影……课后每人都能拿出几张漂亮的作品。</p></div>
+    <div class="hl gold" data-page-node-id="JQElBSDBnkuxbDJoWax0me"><span class="tag" data-page-node-id="ZWH9gtMAPemDHF7S2zbpty">肆</span><h4 data-page-node-id="3lyXcC1Qh727h1hEPTEHy4">故事优先 · 不学究</h4><p data-page-node-id="E5Ua2p7LwEYH2JFY2qTYBl">不背年代、不考概念，拿故事说话。伍子胥筑城、范仲淹办学、白居易挖河、状元郎的趣闻轶事……历史变成活生生的人和事，听得进、记得牢。</p></div>
+    <div class="hl" data-page-node-id="3O2IOGdAyqY6jUc9VvlIWo"><span class="tag" data-page-node-id="66rJerxKlAbCMkFkLkpxSu">伍</span><h4 data-page-node-id="IO8BNBIpTYRgvCK6blrZpC">秋天的苏州最美 · 正好出发</h4><p data-page-node-id="h5g6muhTe66srrGdh2Bz0i">十月银杏流金、山塘棹歌声声、古城墙下秋阳正好，五次户外赶在苏州最舒服的季节，不冷不热，走起来恰到好处。</p></div>
+  </div>
+</section>
+
+<section id="s-sche" data-page-node-id="l2qlPV8ffWSh0IUdTObAR8">
+  <div class="sec-h" data-page-node-id="FuLz2yudok29tPB5dfoaIN"><span class="no" data-page-node-id="gaWCFCQDGmiBmHwq9yw830">叁</span><h2 data-page-node-id="S1rlvBUETHSarQV7nihqnO">课程安排 · 15 课目录</h2><span class="en" data-page-node-id="oLOTWNiFmC0AjVsH9q1o6W">SCHEDULE</span></div>
+  <p class="lead" data-page-node-id="c35ZwqEhYUeI3o715NFyQc">全课程分为四个单元，从「城与河」到「学与脉」、「商与街」再到「古今苏州」，由源到流、由古及今。户外课与室内课穿插编排——户外前有室内课打底、户外后有室内课延伸。</p>
+  <div class="filters" data-page-node-id="flpT3GfvZdMMtXAK2ERa8U">
+    <button class="on" data-f="all" data-page-node-id="vkQkolMNmwnpyyJgNl1mCE">全部 15 课</button>
+    <button data-f="in" data-page-node-id="QZ4keXobfVlL1Gim4bkTms">室内 10 课</button>
+    <button data-f="out" data-page-node-id="sZIs79uWaaeOEOjt1ci6Bs">户外 5 课</button>
+  </div>
+
+  <div class="unit" data-u="1" data-page-node-id="i3lEImA3TdYho2Y7q611C4">
+    <div class="unit-h" data-page-node-id="EeUu4l0zQfEHZaZzxAPIMk"><span class="dot" style="background:#9b2226" data-page-node-id="idiLCLbZ0dFkKu91NR7qFv"></span><h3 data-page-node-id="j4YJUdK6nxTZIlEOABIcr4">第一单元 · 城与河</h3><span class="cnt" data-page-node-id="FUscBrbtRKEEaFfgqWxPrA">课 1–5</span></div>
+    <div class="rows" data-page-node-id="AYkkQQptnxjARHFMY58hMA">
+      <div class="lesson in" data-page-node-id="XdkqRGF7mwlPkctsAe2dOK"><span class="idx" data-page-node-id="1DN7z3e6qJbKfzjBg8zjkO">1</span><span class="t" data-page-node-id="fFSqcGHlioCf9mNC2OQvdP">伍子胥筑城——苏州 2500 年从何而来</span><span class="tag" data-page-node-id="X5j4mbxD2LtDjlwlP2FM9M">室内</span></div>
+      <div class="lesson in" data-page-node-id="YkepT74sNj0qAFyZcBalnm"><span class="idx" data-page-node-id="3YFhJVehhx1moUNDvishSv">2</span><span class="t" data-page-node-id="YzZ8sMAg3ZBOuCBTKoHaHo">《平江图》上的宋代苏州</span><span class="tag" data-page-node-id="B02Uz6DA21eQED6GBymDL5">室内</span></div>
+      <div class="lesson out" data-page-node-id="Zwpg2byiZdjKCrrAp8zPxr"><span class="idx" data-page-node-id="NpKssC3h6IHiphQIMiwC1W">3</span><span class="t" data-page-node-id="sfgf7uBgSRDSnNQok5pLmY">北寺塔 · 古城龙脉</span><span class="tag" data-page-node-id="SLSUZWA2kFdAtKLm2pWYyR">户外 ①</span></div>
+      <div class="lesson in" data-page-node-id="tkMTAfEE5IEwUVXDOLWXUV"><span class="idx" data-page-node-id="2zceiyZ81eOC22VOy20Jof">4</span><span class="t" data-page-node-id="IbLExos7UEbUNYc2PhuODd">城门与城墙——苏州八门的前世今生</span><span class="tag" data-page-node-id="rCZHKS1d5rMEGYcIz9oAGN">室内</span></div>
+      <div class="lesson in" data-page-node-id="f3PPYY0ECB728N2JGXWiRn"><span class="idx" data-page-node-id="KH6gtXYpbew50a9DpN4xhW">5</span><span class="t" data-page-node-id="GoDAiG5xXchpMy7fhoSMFO">宝塔里的苏州（四塔巡礼 + 真珠舍利宝幢）</span><span class="tag" data-page-node-id="EjlHMbbpb0fgKdDdgXCqCO">室内</span></div>
+    </div>
+  </div>
+
+  <div class="unit" data-u="2" data-page-node-id="CxU2oVtloNbCLQeccJU0m7">
+    <div class="unit-h" data-page-node-id="L5DTaGVcm4A5zFHqLxfvS0"><span class="dot" style="background:#b8923e" data-page-node-id="fqW2Os4o1PwTKRdGASLuRP"></span><h3 data-page-node-id="jFnSYTgrQ9ziCMzHaTTjkZ">第二单元 · 学与脉</h3><span class="cnt" data-page-node-id="ElLUXMA5JmI94p5vvApOm7">课 6–9</span></div>
+    <div class="rows" data-page-node-id="UrAVJQP2r4TbaPHswZa2La">
+      <div class="lesson in" data-page-node-id="FaiGKiId9i7QPV7IMSP53K"><span class="idx" data-page-node-id="IGqqzoq6giQ1Yx7r4s0rCu">6</span><span class="t" data-page-node-id="LItuaT7Mst6zQREHZCr12L">范仲淹与府学——天下府学自苏始</span><span class="tag" data-page-node-id="arUmYJhO0EJkcBhnV3NimP">室内</span></div>
+      <div class="lesson out" data-page-node-id="eB4a36S18PBZENPQPXezHa"><span class="idx" data-page-node-id="5hWdTG5KdjeMLbjNx7Rr3H">7</span><span class="t" data-page-node-id="SFlJbIqCkrI1ZFuZXKCjqe">苏州文庙 · 文脉之旅（上）</span><span class="tag" data-page-node-id="LYBad1ZudgeSv4SJDoF4KG">户外 ②</span></div>
+      <div class="lesson in" data-page-node-id="ECneLdsl1DAfkuyeWpMfhf"><span class="idx" data-page-node-id="vYPVih9MEK5NwrbGF5GDdB">8</span><span class="t" data-page-node-id="l1uwtUMLkmqoBv7sA7Rau9">苏州状元甲天下</span><span class="tag" data-page-node-id="ILixWUPBEkxVRf0QWzD20P">室内</span></div>
+      <div class="lesson out" data-page-node-id="tIxsmCbZhtlNk0ccsOuWfx"><span class="idx" data-page-node-id="exDJNfKGDXG8f5rAQNrcVD">9</span><span class="t" data-page-node-id="D52sceo11gO63sgG8qKT9N">苏州大学 · 文脉之旅（下）</span><span class="tag" data-page-node-id="uEkJEFQb5FVGOzEee7bvoy">户外 ③</span></div>
+    </div>
+  </div>
+
+  <div class="unit" data-u="3" data-page-node-id="TXcAhLKk5UjGRKV7NHZUxb">
+    <div class="unit-h" data-page-node-id="LmqcFSyCZl7F5TlCkrlO0c"><span class="dot" style="background:#3f6f5c" data-page-node-id="QbfVnTQDuqKPDWqYIVu6jB"></span><h3 data-page-node-id="5ySvUogGIiE6zlvSJsjiuZ">第三单元 · 商与街</h3><span class="cnt" data-page-node-id="A26DnnuVry5MbE4u6Ff9RG">课 10–13</span></div>
+    <div class="rows" data-page-node-id="3XyOk1eFEckM2N1jFhkRm5">
+      <div class="lesson in" data-page-node-id="QsFFF69UalcMCyyFHMfeBq"><span class="idx" data-page-node-id="hUEfqy5doTgHDE4oOj5ldD">10</span><span class="t" data-page-node-id="sr2PYSZOA3G7qSK59D1J5K">阊门——《红楼梦》开篇的富贵风流地</span><span class="tag" data-page-node-id="wSaGQnyPF0S93quMvgEmti">室内</span></div>
+      <div class="lesson out" data-page-node-id="7H3ZBXc9VUuLxRKEcMqHKf"><span class="idx" data-page-node-id="5vHNUzF5mvmv0p1vltmDy9">11</span><span class="t" data-page-node-id="z2FT5use2gTZ0M5fCWh3ys">阊门 · 水陆城门探秘</span><span class="tag" data-page-node-id="XJeHvEJfkXUwVMDKxKHdtu">户外 ④</span></div>
+      <div class="lesson in" data-page-node-id="CN4I4okHOg7tI7C5bf2Sru"><span class="idx" data-page-node-id="fu3NjikYjoSCnB0tyopZH4">12</span><span class="t" data-page-node-id="iMQWMZJg4tRttm3fda0Tmc">白居易与山塘河——一位刺史的城市遗产</span><span class="tag" data-page-node-id="lqgbGVkLimVVAtU1UPhZgt">室内</span></div>
+      <div class="lesson out" data-page-node-id="oksYBgtpSxvNLsOG1879YG"><span class="idx" data-page-node-id="luiFInmAtM7Dfh5p0YCqAE">13</span><span class="t" data-page-node-id="JjqtjxGkzUAJiakGTWj9PB">山塘街 · 不为人知的故事</span><span class="tag" data-page-node-id="HtfdCqtqGGdNHP3btYiCfE">户外 ⑤</span></div>
+    </div>
+  </div>
+
+  <div class="unit" data-u="4" data-page-node-id="StBOZk3oeenu6wwQIfMNH9">
+    <div class="unit-h" data-page-node-id="AcfShlL8gKIhtq7M7NIUfv"><span class="dot" style="background:#4d5f7a" data-page-node-id="DUZO8yg79AXZVVmtsvh4A2"></span><h3 data-page-node-id="F1ZoQwLmqHFM4BvqG8J3Eg">第四单元 · 古今苏州</h3><span class="cnt" data-page-node-id="5mXPIjGNdB7PGHO2cSfSwx">课 14–15</span></div>
+    <div class="rows" data-page-node-id="J16G0msu4uTMXdHP5Y85yM">
+      <div class="lesson in" data-page-node-id="FAXeUPCjZZ1a4ov43Q3ddk"><span class="idx" data-page-node-id="IDMhQ7lRsLU2LKz90aBG2F">14</span><span class="t" data-page-node-id="An6tZiEKShBaGcBuFfh2Ux">从《姑苏繁华图》看明清苏州</span><span class="tag" data-page-node-id="AwY82xDPL4cC8C6JZxqWEJ">室内</span></div>
+      <div class="lesson in" data-page-node-id="GBoDv2MT2HywnJ6WuqqFgk"><span class="idx" data-page-node-id="uozucmzKX6TAoJvJwxDH3a">15</span><span class="t" data-page-node-id="UYIhezWuOb9ArxUZxFBF7B">总结课：古城保护与古今对话</span><span class="tag" data-page-node-id="DGhhABRfq8rLpxEj91XMSJ">室内</span></div>
+    </div>
+  </div>
+
+  <div class="legend" data-page-node-id="tP9KDIpm1A6o0XA54U08YV">
+    <span class="li-out" data-page-node-id="2rDZnkSA9EMc1Jnwl4CEt1"><i style="background:var(--out)" data-page-node-id="stbk1TP0UgcmNVA4Kb3u3M"></i>户外现场课（5次，橙色）</span>
+    <span class="li-in" data-page-node-id="VgyUeUhFh8BPCGXjzLuQaB"><i style="background:var(--paper2)" data-page-node-id="8fAvZDdjcNNBOE9LENB06B"></i>室内专题课（10次）</span>
+  </div>
+</section>
+
+<section id="s-out" data-page-node-id="jidmo1UAkgi5hi5JjufwcV">
+  <div class="sec-h" data-page-node-id="DucbytQ3H4ZhKQPbtntzhD"><span class="no" data-page-node-id="KmlgcLAWfisUogioqTEVyr">肆</span><h2 data-page-node-id="sxmpJdyUgkmTKiwUcyeSRV">五堂户外现场课一览</h2><span class="en" data-page-node-id="juP9j5khDiZeVXSKWHgZGD">OUTDOOR SITES</span></div>
+  <p class="lead" data-page-node-id="3PHJHPDH1Em3LJC7dlLcHQ">每次户外都有一站历史现场 + 一个手机摄影实战主题：</p>
+  <div class="outs" data-page-node-id="DsDM0AtxKT2yYBffSwyuWc">
+    <div class="outc" data-page-node-id="ZP7hGJ2dLMPJ7k2p1Pnf6k"><div class="where" data-page-node-id="zZlzhXY2lEDpZ5JJKBhdYz"><span class="n" data-page-node-id="pnKOgaeZIKRBXt7hmcUhhE">户外 ①</span><h4 data-page-node-id="k2r45CKwF17Q3JrKceajsX">北寺塔 · 古城龙脉</h4></div><p data-page-node-id="6U6UCBJB7ABaESo7o5VtMk">仰望北寺塔研读古城千年地标。</p><span class="cam" data-page-node-id="lmtOMddaqZY0H8ntOld9OQ">📷 给宝塔「戴绿帽子」</span></div>
+    <div class="outc" data-page-node-id="ImE7lSSfuE4a35MZdmPscT"><div class="where" data-page-node-id="vg0tNq1TMG1nowJiQjyAfC"><span class="n" data-page-node-id="JM4sJ7GsDn52kTkisRAADB">户外 ②</span><h4 data-page-node-id="RofpEIDfj95NoPxh8iTyDE">苏州文庙 · 文脉之旅（上）</h4></div><p data-page-node-id="pP9NeqHVZAOfTCZHkYdDC5">八百年银杏，红墙金叶。</p><span class="cam" data-page-node-id="nB3TDw8zQOsn4Zr1h7fwUg">📷 红墙金叶构图</span></div>
+    <div class="outc" data-page-node-id="M1rkLxUxCpcc4WkWGmhRQ3"><div class="where" data-page-node-id="fVEuyY9oCxFiot2BSXEY7d"><span class="n" data-page-node-id="72bxS6yJJLOYCQK3SiSqEK">户外 ③</span><h4 data-page-node-id="Qo5bqRHEQwvewcdMDuYoa2">苏州大学 · 文脉之旅（下）</h4></div><p data-page-node-id="OyvVKYDjIlN6FGMRkLuzdW">红砖钟楼，白云蓝天。</p><span class="cam" data-page-node-id="F1J3eZgBJE4AEim1s9W9G5">📷 水平线与建筑对称构图</span></div>
+    <div class="outc" data-page-node-id="LfLC0A6Am8gLDl3kx1S713"><div class="where" data-page-node-id="PGIQ675umttYgzz4GItaqb"><span class="n" data-page-node-id="K1pEzDtgMKY4DiX9mk9TFb">户外 ④</span><h4 data-page-node-id="YqkbGM1TSx1RLRJ7YKyV8r">阊门 · 水陆城门探秘</h4></div><p data-page-node-id="Slqg6JaFVtiwwj7kuaqrRs">水陆城门，古今车流。</p><span class="cam" data-page-node-id="eIsydettcBKt5uTLZXqXZF">📷 延时车流 · 超广角古今同框 · 射箭口框住虎丘塔</span></div>
+    <div class="outc" data-page-node-id="ACHMahd87fVby9BxsBQmD7"><div class="where" data-page-node-id="lIHnnjRPzx6zsfOzyu3W0Y"><span class="n" data-page-node-id="Hoc2TJcZZWzg3nzosI2cg3">户外 ⑤</span><h4 data-page-node-id="iCyfLREYgJIK3sCQY6GNvL">山塘街 · 不为人知的故事</h4></div><p data-page-node-id="EGAAmecHFkplmw7NMx8FG4">通贵桥上，江南水乡。</p><span class="cam" data-page-node-id="4rgQAdcHyJtcJvQLrE8E9q">📷 桥洞框景与倒影</span></div>
+  </div>
+</section>
+
+<section id="s-aud" data-page-node-id="WODWI6soKavZUC8h2CKeCG">
+  <div class="sec-h" data-page-node-id="WJGZZvTZ0ZgaBFBMXxSl8R"><span class="no" data-page-node-id="BDICFg9gxOaNCuFi5vYCUH">伍</span><h2 data-page-node-id="62vFLrRNqcKF4zpQjQXJR2">适合人群</h2><span class="en" data-page-node-id="Z9H43DZ5xHedbHW38SPDNl">WHO IS IT FOR</span></div>
+  <div class="auds" data-page-node-id="QTMY05CMmsIzP9Ph3JcJxz">
+    <div class="aud" data-page-node-id="gKA93FCvyMaL2iG32d8En4">对苏州历史文化感兴趣的朋友——不管是「老苏州」还是「新苏州人」，都能从中发现城市的新面貌。</div>
+    <div class="aud" data-page-node-id="HUCKahep793LfvNEYCoFQG">喜欢走出家门、结伴游学的老年朋友——以文会友，在走读中结交志同道合的朋友。</div>
+    <div class="aud" data-page-node-id="lBRVCrpGRnU2v2l7yBCXBj">想学手机摄影的朋友——五次户外课都有摄影实战，边玩边学边拍，课后就能出作品。</div>
+    <div class="aud" data-page-node-id="FaqSzKTYGaDrBmiwGtiq0B">退休后想丰富精神文化生活的朋友——既学知识又交朋友，让退休生活有趣有料有期待。</div>
+  </div>
+</section>
+
+<div class="closer" data-page-node-id="NUUI3o4TcuwPRETXyDo2M0">
+  <div class="big" data-page-node-id="hBV3kT18Trp8YiYf0SEg3Z">秋高气爽，走进城塔河街，做一回「城市考古人」。</div>
+  <div class="sm" data-page-node-id="hMbr2xQkkbA4SQFAzHrxwQ">《吴地时光机》· 期待与您同行</div>
+</div>
+
+<footer data-page-node-id="6tEnUaIwN4lSQT5T1pdEP9">《吴地时光机》2026 秋季班 · 交互目录页（内容整理自课程介绍文稿）</footer>
+</div>
+
+<script>
+function go(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
+(function(){
+  var btns=document.querySelectorAll('.filters button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on')}); b.classList.add('on');
+    var f=b.dataset.f;
+    document.querySelectorAll('.unit').forEach(function(u){
+      var vis=0;
+      u.querySelectorAll('.lesson').forEach(function(ls){
+        var show=(f==='all')||(f==='out'?ls.classList.contains('out'):ls.classList.contains('in'));
+        ls.style.display=show?'':'none'; if(show)vis++;
+      });
+      var cnt=u.querySelector('.cnt');
+      u.style.display=vis?'':'none';
+      if(cnt&&vis){cnt.textContent='课 '+u.dataset.u+' · 显示 '+vis+' 课'}
+    });
+  })});
+})();
+</script>
+</body>
+</html>
