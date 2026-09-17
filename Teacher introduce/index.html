@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>封子老师 · 教师介绍｜吴地时光机</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","STSong","SimSun","Microsoft YaHei",serif;
+  background:#F6F1E7;
+  color:#3B2E22;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(201,164,92,.08), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(158,44,38,.06), transparent 45%);
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* ===== 顶部 ===== */
+header{position:relative;overflow:hidden;background:linear-gradient(160deg,#211A10 0%,#33261A 60%,#3D2B1C 100%);color:#F5EFE3}
+header::before{content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(45deg,rgba(201,164,92,.05) 0 2px,transparent 2px 14px)}
+.hd-inner{position:relative;max-width:1080px;margin:0 auto;padding:64px 22px 88px;display:flex;gap:52px;align-items:center;flex-wrap:wrap}
+.portrait{position:relative;flex:0 0 300px;width:300px}
+.portrait img{width:300px;display:block;border-radius:8px;
+  border:3px solid #C9A45C;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.portrait::after{content:"封子老师";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);
+  background:linear-gradient(180deg,#E8C87A,#C9A45C);color:#161006;
+  font-size:22px;letter-spacing:8px;text-indent:8px;padding:8px 26px;border-radius:4px;
+  white-space:nowrap;font-weight:bold;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.hd-text{flex:1;min-width:300px}
+.hd-tag{display:inline-block;border:1px solid rgba(232,200,122,.55);color:#E8C87A;
+  font-size:14px;letter-spacing:6px;text-indent:6px;padding:6px 16px;border-radius:3px;margin-bottom:22px}
+h1{font-size:56px;letter-spacing:10px;font-weight:bold;line-height:1.15}
+h1 small{display:block;font-size:17px;letter-spacing:4px;color:#C9A45C;margin-top:14px;font-weight:normal}
+.hd-line{width:64px;height:3px;background:linear-gradient(90deg,#C9A45C,transparent);margin:26px 0}
+.hd-brief{font-size:16.5px;line-height:2;color:#E4D9C4;max-width:560px}
+.hd-brief b{color:#E8C87A;font-weight:normal}
+
+/* ===== 数据条 ===== */
+.stats{max-width:1080px;margin:-46px auto 0;position:relative;z-index:2;display:flex;gap:14px;padding:0 22px;flex-wrap:wrap}
+.stat{flex:1;min-width:150px;background:#FFFDF7;border:1px solid #E4D5B4;border-top:3px solid #C9A45C;
+  border-radius:6px;padding:20px 12px;text-align:center;box-shadow:0 10px 26px rgba(59,46,34,.08)}
+.stat .n{font-size:34px;font-weight:bold;color:#9E2C26;font-family:Georgia,"Songti SC",serif}
+.stat .n span{font-size:15px;color:#3B2E22;font-family:inherit;margin-left:2px}
+.stat .t{font-size:13.5px;color:#8A7355;margin-top:6px;letter-spacing:2px}
+
+/* ===== 通用段落 ===== */
+section{padding:66px 0 8px}
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head .en{font-size:12px;letter-spacing:5px;color:#C9A45C;font-family:Georgia,serif}
+.sec-head h2{font-size:32px;letter-spacing:8px;margin-top:8px;color:#3B2E22}
+.sec-head .rule{width:46px;height:2px;background:#9E2C26;margin:16px auto 0}
+
+/* ===== 栏目作品 ===== */
+.shows{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.show{background:#FFFDF7;border:1px solid #E4D5B4;border-radius:8px;padding:28px 22px;transition:.25s}
+.show:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(59,46,34,.12)}
+.show .ico{font-size:26px}
+.show h3{font-size:19px;margin:12px 0 8px;color:#9E2C26;letter-spacing:2px}
+.show p{font-size:14.5px;line-height:1.9;color:#6E5B44}
+
+/* ===== 课程 ===== */
+.course{background:#FFFDF7;border:1px solid #E4D5B4;border-radius:10px;overflow:hidden;
+  box-shadow:0 12px 34px rgba(59,46,34,.1)}
+.course-top{background:linear-gradient(135deg,#9E2C26,#7E1519);color:#F9E9C8;padding:34px 36px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.course-top h3{font-size:27px;letter-spacing:4px}
+.course-top p{font-size:14.5px;opacity:.92;margin-top:8px;letter-spacing:1px}
+.course-top .num{text-align:center;border-left:1px solid rgba(249,233,200,.35);padding-left:28px}
+.course-top .num b{font-size:44px;font-family:Georgia,serif;display:block;line-height:1}
+.course-top .num span{font-size:13px;letter-spacing:3px;opacity:.9}
+.course-body{padding:34px 36px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.mode h4{font-size:17px;color:#9E2C26;letter-spacing:3px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.mode h4::before{content:"";width:8px;height:8px;background:#C9A45C;transform:rotate(45deg)}
+.mode p{font-size:15px;line-height:2;color:#5C4A35}
+.stations{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+.stations span{font-size:14px;border:1px solid #C9A45C;color:#7A5E2E;border-radius:999px;padding:5px 16px;letter-spacing:2px}
+
+/* ===== 特长 ===== */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skill{border-left:3px solid #C9A45C;background:linear-gradient(90deg,rgba(201,164,92,.09),transparent);
+  padding:20px 22px;border-radius:0 6px 6px 0}
+.skill b{display:block;font-size:16.5px;color:#3B2E22;letter-spacing:2px;margin-bottom:8px}
+.skill p{font-size:14px;line-height:1.9;color:#6E5B44}
+
+/* ===== 页脚 ===== */
+footer{margin-top:70px;background:#211A10;color:#B9A582;text-align:center;padding:34px 20px;font-size:14px;letter-spacing:3px}
+footer b{color:#E8C87A}
+
+@media (max-width:720px){
+  h1{font-size:40px}
+  .hd-inner{padding:44px 20px 96px;gap:60px}
+  .portrait{flex:0 0 240px;width:240px}
+  .portrait img{width:240px}
+  .course-body{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd-inner">
+    <div class="portrait"><img src="封子老师_形象图.jpg" alt="封子老师形象图"></div>
+    <div class="hd-text">
+      <span class="hd-tag">姑苏区老年大学 · 特聘文史讲师</span>
+      <h1>封 峰<small>网名「封子老师」· 苏州本土文旅内容创作者</small></h1>
+      <div class="hd-line"></div>
+      <p class="hd-brief">长期深耕苏州本地历史文化的研究与传播，全网文旅短视频粉丝<b>8万余人</b>。擅长以<b>老照片、古画、老地图</b>等影像资料还原姑苏千年风貌，讲解生动风趣、通俗易懂，贴近中老年受众的认知习惯。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">8<span>万+</span></div><div class="t">全网短视频粉丝</div></div>
+    <div class="stat"><div class="n">15<span>讲</span></div><div class="t">《吴地时光机》课程</div></div>
+    <div class="stat"><div class="n">10<span>堂</span></div><div class="t">室内史料精讲</div></div>
+    <div class="stat"><div class="n">5<span>堂</span></div><div class="t">户外现场课</div></div>
+  </div>
+
+  <section id="shows">
+    <div class="sec-head">
+      <div class="en">PROGRAMS</div>
+      <h2>主讲栏目与作品</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="shows">
+      <div class="show"><div class="ico">🏮</div><h3>封子老师探苏州</h3><p>历史文化栏目，走街串巷讲苏州，把街巷故事讲给苏州人听。</p></div>
+      <div class="show"><div class="ico">🔍</div><h3>古城大侦探</h3><p>古城探秘栏目，在阊门城墙与深巷旧宅间寻找被遗忘的谜底。</p></div>
+      <div class="show"><div class="ico">🎬</div><h3>吴地名侦探</h3><p>系列短视频作品，以侦探视角细读吴地文史，趣味破案式讲解。</p></div>
+      <div class="show"><div class="ico">🖼️</div><h3>姑苏繁华图</h3><p>系列短视频作品，逐段解读清代长卷，两百年前的苏州跃然眼前。</p></div>
+    </div>
+  </section>
+
+  <section id="course">
+    <div class="sec-head">
+      <div class="en">COURSE 2026 AUTUMN</div>
+      <h2>《吴地时光机》趣味文史课程</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="course">
+      <div class="course-top">
+        <div>
+          <h3>边走 · 边学 · 边拍</h3>
+          <p>2026年秋季起受聘于姑苏区老年大学 · 在古城实景中品读江南文脉</p>
+        </div>
+        <div class="num"><b>15</b><span>讲 · 全课程</span></div>
+      </div>
+      <div class="course-body">
+        <div class="mode">
+          <h4>室内 · 10堂精讲</h4>
+          <p>以史料图文系统梳理吴地千年文脉——从吴越春秋到明清繁华，一讲一主题，听得懂、记得住。</p>
+        </div>
+        <div class="mode">
+          <h4>户外 · 5堂现场课</h4>
+          <p>带领学员走进历史现场，即兴传授手机摄影技巧，把课堂搬进千年古城。</p>
+          <div class="stations">
+            <span>北寺塔</span><span>阊门</span><span>山塘街</span><span>文庙</span><span>苏州大学</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head">
+      <div class="en">STRENGTHS</div>
+      <h2>教学特色</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="skills">
+      <div class="skill"><b>影像还原</b><p>老照片、古画、老地图信手拈来，让千年姑苏在课堂上"活"过来。</p></div>
+      <div class="skill"><b>风趣通俗</b><p>讲解生动风趣、通俗易懂，专为中老年学员量身定制认知节奏。</p></div>
+      <div class="skill"><b>现场教学</b><p>五堂户外课走进历史现场，站在故事发生的地方听故事。</p></div>
+      <div class="skill"><b>摄影加分</b><p>即兴传授手机摄影技巧，学员边走、边学、边拍，收获双重能力。</p></div>
+    </div>
+  </section>
+</div>
+
+<footer>吴地时光机 · 讲苏州传奇故事<br><b style="font-size:16px">《姑苏繁华图》古今找不同</b><br><br>封子老师 · 与您一起在古城实景中品读江南文脉</footer>
+
+</body>
+</html>
