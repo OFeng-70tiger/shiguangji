@@ -38,13 +38,15 @@ h1 small{display:block;font-size:17px;letter-spacing:4px;color:#C9A45C;margin-to
 .hd-brief{font-size:16.5px;line-height:2;color:#E4D9C4;max-width:560px}
 .hd-brief b{color:#E8C87A;font-weight:normal}
 
-/* ===== 数据条 ===== */
-.stats{max-width:1080px;margin:-46px auto 0;position:relative;z-index:2;display:flex;gap:14px;padding:0 22px;flex-wrap:wrap}
-.stat{flex:1;min-width:150px;background:#FFFDF7;border:1px solid #E4D5B4;border-top:3px solid #C9A45C;
-  border-radius:6px;padding:20px 12px;text-align:center;box-shadow:0 10px 26px rgba(59,46,34,.08)}
-.stat .n{font-size:34px;font-weight:bold;color:#9E2C26;font-family:Georgia,"Songti SC",serif}
-.stat .n span{font-size:15px;color:#3B2E22;font-family:inherit;margin-left:2px}
-.stat .t{font-size:12.5px;color:#8A7355;margin-top:6px;letter-spacing:1px;white-space:nowrap}
+/* ===== 数据条（正八边形卡） ===== */
+.stats{max-width:840px;margin:-52px auto 0;position:relative;z-index:2;display:flex;gap:18px;padding:0 22px;flex-wrap:wrap;justify-content:center}
+.stat{flex:1;min-width:150px;max-width:185px;position:relative;background:#C9A45C;padding:26px 10px;text-align:center;
+  clip-path:polygon(29% 0,71% 0,100% 29%,100% 71%,71% 100%,29% 100%,0 71%,0 29%)}
+.stat::before{content:'';position:absolute;inset:2px;background:linear-gradient(160deg,#7C1A1F,#631317);clip-path:polygon(29% 0,71% 0,100% 29%,100% 71%,71% 100%,29% 100%,0 71%,0 29%)}
+.stat .n,.stat .t{position:relative;z-index:1}
+.stat .n{font-size:40px;font-weight:bold;color:#E8C983;font-family:Georgia,"Songti SC",serif}
+.stat .n span{font-size:17px;color:#D9B77E;font-family:inherit;margin-left:2px}
+.stat .t{font-size:14px;color:rgba(232,201,131,.78);margin-top:7px;letter-spacing:0;white-space:nowrap}
 
 /* ===== 通用段落 ===== */
 section{padding:66px 0 8px}
@@ -106,9 +108,10 @@ section{padding:66px 0 8px}
   .shows{grid-template-columns:1fr}
   .stats{gap:8px;padding:0 12px}
   .stat{min-width:0;padding:12px 4px}
-  .stat .n{font-size:22px}
-  .stat .n span{font-size:11px}
-  .stat .t{font-size:10px;letter-spacing:0;margin-top:4px;white-space:nowrap}
+  .stat,.stat::before{clip-path:polygon(22% 0,78% 0,100% 22%,100% 78%,78% 100%,22% 100%,0 78%,0 22%)}
+  .stat .n{font-size:26px}
+  .stat .n span{font-size:12px}
+  .stat .t{font-size:10.5px;letter-spacing:0;margin-top:5px;white-space:nowrap}
   .vf-thumb{margin:0 auto}
   .vf-info{text-align:center}
 }
