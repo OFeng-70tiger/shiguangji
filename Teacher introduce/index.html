@@ -54,15 +54,31 @@ section{padding:66px 0 8px}
 .sec-head .rule{width:46px;height:2px;background:#9E2C26;margin:16px auto 0}
 
 /* ===== 栏目作品 ===== */
-.shows{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.show{background:#FFFDF7;border:1px solid #E4D5B4;border-radius:8px;padding:28px 22px;transition:.25s}
+.shows{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.show{background:#FFFDF7;border:1px solid #E4D5B4;border-radius:8px;padding:26px 22px;transition:.25s;display:flex;flex-direction:column}
 .show:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(59,46,34,.12)}
 .show .ico{font-size:26px}
 .show h3{font-size:19px;margin:12px 0 8px;color:#9E2C26;letter-spacing:2px}
-.show p{font-size:14.5px;line-height:1.9;color:#6E5B44}
+.show > p{font-size:14.5px;line-height:1.9;color:#6E5B44}
+
+/* 栏目内视频卡（视频号跳转） */
+.show-vf{display:block;margin-top:auto;padding-top:18px;text-decoration:none;color:inherit}
+.sv-thumb{position:relative;display:block;border-radius:8px;overflow:hidden;border:2px solid #C9A45C;box-shadow:0 10px 24px rgba(59,46,34,.18)}
+.sv-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:.25s}
+.show-vf:hover .sv-thumb img{transform:scale(1.045)}
+.show-vf:hover .vf-play i{background:rgba(158,44,38,.75);transform:scale(1.08)}
+.sv-tag{display:inline-block;border:1px solid rgba(158,44,38,.4);color:#9E2C26;font-size:12px;letter-spacing:3px;padding:3px 12px;border-radius:3px;margin-top:14px}
+.sv-title{display:block;font-size:17.5px;font-weight:bold;color:#3B2E22;margin-top:10px;letter-spacing:1px;line-height:1.55}
+.sv-desc{display:block;font-size:14px;line-height:1.85;color:#6E5B44;margin-top:7px}
+.sv-go{display:inline-block;margin-top:10px;font-size:14px;letter-spacing:2px;color:#9E2C26;font-weight:bold}
+.show-vf:hover .sv-go{color:#C9A45C}
 
 /* ===== 视频号特写 ===== */
-.video-feature{margin-top:24px}
+.video-feature{margin-top:0}
+.vf-head{text-align:center;margin:58px 0 26px}
+.vf-head .en{font-size:11px;letter-spacing:5px;color:#C9A45C;font-family:Georgia,serif}
+.vf-head h3{font-size:25px;letter-spacing:6px;margin-top:9px;color:#3B2E22;font-weight:bold}
+.vf-head .rule{width:38px;height:2px;background:#9E2C26;margin:14px auto 0}
 .vf-card{display:flex;gap:26px;align-items:center;flex-wrap:wrap;
   background:linear-gradient(135deg,#FFFDF7,#FBF4E4);border:1px solid #E4D5B4;border-radius:12px;
   padding:26px;box-shadow:0 14px 34px rgba(59,46,34,.12);text-decoration:none;transition:.25s}
@@ -84,6 +100,7 @@ section{padding:66px 0 8px}
 .vf-go{display:inline-block;margin-top:16px;font-size:14.5px;letter-spacing:2px;color:#9E2C26;font-weight:bold}
 .vf-card:hover .vf-go{color:#C9A45C}
 @media (max-width:720px){
+  .shows{grid-template-columns:1fr}
   .vf-thumb{margin:0 auto}
   .vf-info{text-align:center}
 }
@@ -154,22 +171,50 @@ footer b{color:#E8C87A}
       <div class="rule"></div>
     </div>
     <div class="shows">
-      <div class="show"><div class="ico">🏮</div><h3>封子老师探苏州</h3><p>历史文化栏目，走街串巷讲苏州，把街巷故事讲给苏州人听。</p></div>
-      <div class="show"><div class="ico">🔍</div><h3>古城大侦探</h3><p>古城探秘栏目，在阊门城墙与深巷旧宅间寻找被遗忘的谜底。</p></div>
-      <div class="show"><div class="ico">🎬</div><h3>吴地名侦探</h3><p>系列短视频作品，以侦探视角细读吴地文史，趣味破案式讲解。</p></div>
-      <div class="show"><div class="ico">🖼️</div><h3>姑苏繁华图</h3><p>系列短视频作品，逐段解读清代长卷，两百年前的苏州跃然眼前。</p></div>
-    </div>
-
-    <div class="video-feature">
-      <a class="vf-card" href="https://weixin.qq.com/sph/APt9LgxyKw" target="_blank" rel="noopener">
-        <span class="vf-thumb"><img src="vf_wenxingge.jpg" alt="视频号封面 · 文星阁" loading="lazy"><span class="vf-play"><i></i></span></span>
-        <span class="vf-info">
-          <span class="vf-tag">视频号 · 老师讲的精彩故事</span>
-          <h3>文星阁：是塔、是楼，还藏着一个"风水局"？</h3>
-          <p>苏州大学天赐庄校区的这座"方塔"，与双塔、长洲县学大成殿遥相呼应——三个点接连打卡，才能把最佳的气运吸纳。带上娃，一起去沾沾这无与伦比的文脉之气。</p>
-          <span class="vf-go">▶ 点击观看 · 来自「封子老师探苏州」</span>
-        </span>
-      </a>
+      <div class="show">
+        <div class="ico">🏮</div><h3>封子老师探苏州</h3>
+        <p>历史文化栏目，走街串巷讲苏州，把街巷故事讲给苏州人听。</p>
+        <a class="show-vf" href="https://weixin.qq.com/sph/APt9LgxyKw" target="_blank" rel="noopener">
+          <span class="sv-thumb"><img src="vf_tanzhou.jpg" alt="文星阁视频封面" loading="lazy"><span class="vf-play"><i></i></span></span>
+          <span class="sv-tag">📱 封子老师讲的一个故事</span>
+          <span class="sv-title">文星阁：是塔、是楼，还藏着一个"风水局"？</span>
+          <span class="sv-desc">苏州大学天赐庄校区的这座"方塔"，与双塔、长洲县学大成殿遥相呼应——三个点接连打卡，才能把最佳的气运吸纳。带上娃，一起去沾沾这无与伦比的文脉之气。</span>
+          <span class="sv-go">▶ 点击观看</span>
+        </a>
+      </div>
+      <div class="show">
+        <div class="ico">🔍</div><h3>古城大侦探</h3>
+        <p>古城探秘栏目，在阊门城墙与深巷旧宅间寻找被遗忘的谜底。</p>
+        <a class="show-vf" href="https://weixin.qq.com/sph/AVlQm2zPx8" target="_blank" rel="noopener">
+          <span class="sv-thumb"><img src="vf_gucheng.jpg" alt="阊门城楼视频封面" loading="lazy"><span class="vf-play"><i></i></span></span>
+          <span class="sv-tag">📱 封子老师讲的一个故事</span>
+          <span class="sv-title">登阊门，读城墙</span>
+          <span class="sv-desc">跟着镜头登上阊门城墙、钻进深巷旧宅，把被时间藏起来的苏州，一层一层"侦破"出来。</span>
+          <span class="sv-go">▶ 点击观看</span>
+        </a>
+      </div>
+      <div class="show">
+        <div class="ico">🎬</div><h3>吴地名侦探</h3>
+        <p>系列短视频作品，以侦探视角细读吴地文史，趣味破案式讲解。</p>
+        <a class="show-vf" href="https://weixin.qq.com/sph/Ad0SL9sfTY" target="_blank" rel="noopener">
+          <span class="sv-thumb"><img src="vf_wudi.jpg" alt="吴地名侦探视频封面" loading="lazy"><span class="vf-play"><i></i></span></span>
+          <span class="sv-tag">📱 封子老师讲的一个故事</span>
+          <span class="sv-title">跟着"吴小地"破案</span>
+          <span class="sv-desc">小侦探"吴小地"带你出发——抽丝剥茧，一案一讲，文史知识藏在案情里。</span>
+          <span class="sv-go">▶ 点击观看</span>
+        </a>
+      </div>
+      <div class="show">
+        <div class="ico">🖼️</div><h3>姑苏繁华图</h3>
+        <p>系列短视频作品，逐段解读清代长卷，两百年前的苏州跃然眼前。</p>
+        <a class="show-vf" href="https://weixin.qq.com/sph/Ay7dLrPaT7" target="_blank" rel="noopener">
+          <span class="sv-thumb"><img src="vf_fanhua.jpg" alt="姑苏繁华图视频封面" loading="lazy"><span class="vf-play"><i></i></span></span>
+          <span class="sv-tag">📱 封子老师讲的一个故事</span>
+          <span class="sv-title">一卷《姑苏繁华图》，半部江南史</span>
+          <span class="sv-desc">逐段细读清代长卷，两百年前苏州的市井烟火，一幕幕重新亮起来。</span>
+          <span class="sv-go">▶ 点击观看</span>
+        </a>
+      </div>
     </div>
   </section>
 
