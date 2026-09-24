@@ -59,10 +59,10 @@ section{padding:66px 0 8px}
 .show:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(59,46,34,.12)}
 .show .ico{font-size:26px}
 .show h3{font-size:19px;margin:12px 0 8px;color:#9E2C26;letter-spacing:2px}
-.show > p{font-size:14.5px;line-height:1.9;color:#6E5B44}
+.show > p{font-size:14.5px;line-height:1.9;color:#6E5B44;min-height:5.7em}
 
 /* 栏目内视频卡（视频号跳转） */
-.show-vf{display:block;margin-top:auto;padding-top:18px;text-decoration:none;color:inherit}
+.show-vf{display:block;margin-top:0;padding-top:18px;text-decoration:none;color:inherit}
 .sv-thumb{position:relative;display:block;border-radius:8px;overflow:hidden;border:2px solid #C9A45C;box-shadow:0 10px 24px rgba(59,46,34,.18)}
 .sv-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:.25s}
 .show-vf:hover .sv-thumb img{transform:scale(1.045)}
@@ -72,6 +72,9 @@ section{padding:66px 0 8px}
 .sv-desc{display:block;font-size:14px;line-height:1.85;color:#6E5B44;margin-top:7px}
 .sv-go{display:inline-block;margin-top:10px;font-size:14px;letter-spacing:2px;color:#9E2C26;font-weight:bold}
 .show-vf:hover .sv-go{color:#C9A45C}
+.sv-motto{margin-top:auto;padding-top:16px;text-align:center;font-size:13px;letter-spacing:4px;color:#C9A45C}
+.sv-motto::before{content:"—— "}
+.sv-motto::after{content:" ——"}
 
 /* ===== 视频号特写 ===== */
 .video-feature{margin-top:0}
@@ -128,6 +131,22 @@ section{padding:66px 0 8px}
   padding:20px 22px;border-radius:0 6px 6px 0}
 .skill b{display:block;font-size:16.5px;color:#3B2E22;letter-spacing:2px;margin-bottom:8px}
 .skill p{font-size:14px;line-height:1.9;color:#6E5B44}
+.skill-vf{display:flex;align-items:center;gap:12px;margin-top:12px;text-decoration:none;
+  background:#fff;border:1px solid #E4D5B4;border-radius:10px;padding:8px 12px;transition:.25s}
+.skill-vf:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(59,46,34,.14)}
+.skill-vf img{width:64px;height:96px;object-fit:cover;border-radius:7px;flex:none;box-shadow:0 2px 6px rgba(59,46,34,.22)}
+.skill-vf .t{font-size:13.5px;font-weight:700;color:#9E2C26;line-height:1.6}
+.skill-vf .s{display:block;font-size:12px;font-weight:400;color:#8a7a5f;margin-top:3px}
+.skill-vf .go{display:inline-block;margin-top:5px;font-size:12px;color:#fff;background:linear-gradient(135deg,#c9492f,#9e2b22);
+  border-radius:999px;padding:2px 12px;font-weight:700}
+.skill-vf .t{flex:1}
+@media(min-width:1000px){
+  .skill-vf{flex-direction:row-reverse;align-items:center;gap:10px}
+  .skill-vf img{width:62px;height:93px}
+  .skill-vf .t{font-size:13px;line-height:1.55}
+  .skill-vf .s{display:none}
+  .skill-vf .go{font-size:11px;padding:2px 9px;letter-spacing:0}
+}
 
 /* ===== 页脚 ===== */
 footer{margin-top:70px;background:#211A10;color:#B9A582;text-align:center;padding:34px 20px;font-size:14px;letter-spacing:3px}
@@ -181,6 +200,7 @@ footer b{color:#E8C87A}
           <span class="sv-desc">苏州大学天赐庄校区的这座"方塔"，与双塔、长洲县学大成殿遥相呼应——三个点接连打卡，才能把最佳的气运吸纳。带上娃，一起去沾沾这无与伦比的文脉之气。</span>
           <span class="sv-go">▶ 点击观看</span>
         </a>
+        <div class="sv-motto">听老师讲 · 不一样的苏州故事</div>
       </div>
       <div class="show">
         <div class="ico">🔍</div><h3>古城大侦探</h3>
@@ -192,6 +212,7 @@ footer b{color:#E8C87A}
           <span class="sv-desc">跟着镜头登上阊门城墙、钻进深巷旧宅，把被时间藏起来的苏州，一层一层"侦破"出来。</span>
           <span class="sv-go">▶ 点击观看</span>
         </a>
+        <div class="sv-motto">听老师讲 · 不一样的苏州故事</div>
       </div>
       <div class="show">
         <div class="ico">🎬</div><h3>吴地名侦探</h3>
@@ -203,6 +224,7 @@ footer b{color:#E8C87A}
           <span class="sv-desc">小侦探"吴小地"带你出发——抽丝剥茧，一案一讲，文史知识藏在案情里。</span>
           <span class="sv-go">▶ 点击观看</span>
         </a>
+        <div class="sv-motto">听老师讲 · 不一样的苏州故事</div>
       </div>
       <div class="show">
         <div class="ico">🖼️</div><h3>姑苏繁华图</h3>
@@ -214,6 +236,7 @@ footer b{color:#E8C87A}
           <span class="sv-desc">逐段细读清代长卷，两百年前苏州的市井烟火，一幕幕重新亮起来。</span>
           <span class="sv-go">▶ 点击观看</span>
         </a>
+        <div class="sv-motto">听老师讲 · 不一样的苏州故事</div>
       </div>
     </div>
   </section>
@@ -258,7 +281,15 @@ footer b{color:#E8C87A}
       <div class="skill"><b>影像还原</b><p>老照片、古画、老地图信手拈来，让千年姑苏在课堂上"活"过来。</p></div>
       <div class="skill"><b>风趣通俗</b><p>讲解生动风趣、通俗易懂，专为中老年学员量身定制认知节奏。</p></div>
       <div class="skill"><b>现场教学</b><p>五堂户外课走进历史现场，站在故事发生的地方听故事。</p></div>
-      <div class="skill"><b>摄影加分</b><p>即兴传授手机摄影技巧，学员边走、边学、边拍，收获双重能力。</p></div>
+      <div class="skill"><b>摄影加分</b><p>即兴传授手机摄影技巧，学员边走、边学、边拍，收获双重能力。</p>
+        <a class="skill-vf" href="https://weixin.qq.com/sph/AkiTX4feB9" target="_blank" rel="noopener">
+          <img src="vf_yulan.jpg" alt="手机摄影示范 · 二乔玉兰" loading="lazy">
+          <span class="t">实拍示范：用手机拍 300 岁的二乔玉兰
+            <span class="s">取景、变焦、构图，一部手机全搞定</span>
+            <span class="go">▶ 点击观看</span>
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 </div>
