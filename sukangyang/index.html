@@ -222,8 +222,8 @@ section{margin-top:64px}
 .d-pair b{color:var(--red);font-weight:600}
 
 /* ── 表格 ── */
-.tbl-wrap{margin-top:20px;overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+.tbl-wrap{margin-top:20px;overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--line);border-radius:14px}
+table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:13.5px;min-width:960px}
 th{
   background:rgba(184,137,63,.1);font-weight:600;font-size:12px;letter-spacing:.1em;
   color:var(--ink);padding:13px 15px;text-align:left;font-family:"PingFang SC",sans-serif;
@@ -231,10 +231,32 @@ th{
 }
 td{padding:13px 15px;border-bottom:1px solid rgba(221,211,192,.6);color:var(--ink2);vertical-align:top;line-height:1.7}
 tr:last-child td{border-bottom:none}
-td.k{color:var(--ink);font-weight:600;white-space:nowrap}
-td .form{display:inline-block;font-family:"PingFang SC",sans-serif;font-size:11px;padding:2px 9px;border-radius:4px}
+td.k{color:var(--ink);font-weight:600;white-space:normal;overflow-wrap:anywhere}
+td.no{color:var(--ink);font-weight:600;white-space:nowrap}
+.k-main{display:block;color:var(--ink);font-weight:600;line-height:1.5}
+.k-sub{display:block;margin-top:3px;font-size:11.5px;font-weight:400;color:var(--ink3);line-height:1.45}
+td .form{display:inline-block;white-space:nowrap;font-family:"PingFang SC",sans-serif;font-size:11px;padding:2px 5px;border-radius:4px}
 .f-in{background:#f3e8dc;color:var(--red-d)}
 .f-out{background:#e8efe9;color:var(--teal)}
+
+/* ── 手机端课程总表：可横滑提示 ── */
+.tbl-hint{display:none}
+@keyframes swipe{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}
+@media(max-width:760px){
+  .tbl-hint{
+    display:flex;align-items:center;gap:9px;margin-top:16px;padding:11px 14px;
+    background:rgba(184,137,63,.13);border:1px solid rgba(184,137,63,.32);
+    border-radius:10px;color:var(--red-d);
+    font-family:"PingFang SC",sans-serif;font-size:12.5px;font-weight:600;line-height:1.5;
+    transition:opacity .35s ease;
+  }
+  .tbl-hint .arr{flex:0 0 auto;display:inline-block;font-size:18px;line-height:1;
+    animation:swipe 1.5s ease-in-out infinite}
+  .tbl-hint.is-done{opacity:.38}
+  table{font-size:12.5px}
+  th,td{padding:10px 9px}
+  th{font-size:11.5px;letter-spacing:0}
+}
 
 /* ── 尾注 ── */
 .foot{margin-top:64px;padding:30px 0 0;border-top:1px solid var(--line);display:flex;gap:26px;align-items:flex-end;flex-wrap:wrap}
@@ -428,11 +450,12 @@ td .form{display:inline-block;font-family:"PingFang SC",sans-serif;font-size:11p
     <h2>课程总表</h2>
     <span class="cnt">10 节一览</span>
   </div>
+  <div class="tbl-hint" id="tbl-hint"><span class="arr">→</span><span>左右滑动表格，可查看形式 / 时长 / 主题与亮点 / 配套现场</span></div>
   <div class="tbl-wrap">
     <table>
       <thead><tr>
-        <th style="width:52px">序</th><th style="width:210px">课题</th><th style="width:64px">形式</th>
-        <th style="width:74px">时长</th><th>主题与亮点</th><th style="width:190px">配套现场</th>
+        <th style="width:5%">序</th><th style="width:21%">课题</th><th style="width:6%">形式</th>
+        <th style="width:8%">时长</th><th style="width:42%">主题与亮点</th><th style="width:18%">配套现场</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
@@ -527,9 +550,16 @@ const seq=[['壹','伍子胥筑城——苏州 2500 年从何而来','室内','9
 ['捌','按察使署 · 剪金桥巷 · 苏作牙雕','室外','180 分钟','省城的官署、水巷的生活、苏作的匠心。含 45 分钟牛骨牌手作。','对应「苏州的父母官」'],
 ['玖','阊门 · 水陆城门探秘','室外','120 分钟','门 · 水 · 街 · 庙 · 园六站；《红楼梦》开篇第一句就给阊门。','各自成立 · 八门通史 vs 一座门'],
 ['拾','北寺塔 · 未见苏城先见塔','室外','120 分钟','八站：牌楼 · 龙壁 · 漆雕 · 老照片 · 记功碑 · 楠木观音殿 · 梅圃 · 鲜得楼。','各自成立 · 长卷 vs 古塔']];
+function ktitle(s){
+ var i=s.indexOf('——');
+ if(i>0) return '<span class="k-main">'+s.slice(0,i)+'</span><span class="k-sub">'+s.slice(i+2)+'</span>';
+ i=s.indexOf(' · ');
+ if(i>0) return '<span class="k-main">'+s.slice(0,i)+'</span><span class="k-sub">'+s.slice(i+3)+'</span>';
+ return '<span class="k-main">'+s+'</span>';
+}
 tb.innerHTML=seq.map((r,i)=>{
  const ins=r[2]==='室内';
- return '<tr><td class="k">'+r[0]+'</td><td class="k">'+r[1]+'</td><td><span class="form '+(ins?'f-in':'f-out')+'">'+r[2]+'</span></td><td>'+r[3]+'</td><td>'+r[4]+'</td><td>'+r[5]+'</td></tr>';
+ return '<tr><td class="no">'+r[0]+'</td><td class="k">'+ktitle(r[1])+'</td><td><span class="form '+(ins?'f-in':'f-out')+'">'+r[2]+'</span></td><td>'+r[3]+'</td><td>'+r[4]+'</td><td>'+r[5]+'</td></tr>';
 }).join('');
 
 const G={in:['i1','i2','i3','i4','i5'],out:['o1','o2','o3','o4','o5']};
@@ -580,6 +610,10 @@ document.querySelectorAll('.d-tab').forEach(t=>{
  t.addEventListener('click',()=>show(last[t.dataset.g],false));
 });
 show('i1',false);
+(function(){
+ var w=document.querySelector('.tbl-wrap'),h=document.getElementById('tbl-hint');
+ if(w&&h) w.addEventListener('scroll',function(){if(w.scrollLeft>10)h.classList.add('is-done')},{passive:true});
+})();
 </script>
 </body>
 </html>
